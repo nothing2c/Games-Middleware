@@ -1,2 +1,2 @@
 # Games-Middleware
-Physics CA is in Assets/PhysicsCA
+Physics CA is in Assets/Physics CA
