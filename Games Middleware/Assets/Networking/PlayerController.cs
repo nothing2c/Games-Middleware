@@ -32,8 +32,7 @@ public class PlayerController : MonoBehaviour
         {
             Destroy(GetComponentInChildren<Camera>().gameObject);
             Destroy(rb);
-        }
-           
+        }     
     }
 
     // Update is called once per frame

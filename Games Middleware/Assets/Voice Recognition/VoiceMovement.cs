@@ -33,7 +33,7 @@ public class VoiceMovement : MonoBehaviour
 
     private void Update()
     {
-        transform.position += movement;
+        transform.position += movement * Time.deltaTime;
     }
 
     private void RecognisedSpeech(PhraseRecognizedEventArgs speech)
@@ -44,25 +44,25 @@ public class VoiceMovement : MonoBehaviour
     private void Forward()
     {
         anim.SetBool("isWalking", true);
-        movement = transform.forward * Time.deltaTime;
+        movement = transform.forward;
     }
 
     private void Back()
     {
         anim.SetBool("isWalking", true);
-        movement = -transform.forward * Time.deltaTime;
+        movement = -transform.forward;
     }
 
     private void Left()
     {
         anim.SetBool("isWalking", true);
-        movement = -transform.right * Time.deltaTime;
+        movement = -transform.right;
     }
 
     private void Right()
     {
         anim.SetBool("isWalking", true);
-        movement = transform.right * Time.deltaTime;
+        movement = transform.right;
     }
 
     public void Stop()
@@ -79,6 +79,6 @@ public class VoiceMovement : MonoBehaviour
     public void WalkTowards(Vector3 target)
     {
         anim.SetBool("isWalking", true);
-        movement = target * Time.deltaTime;
+        movement = target;
     }
 }

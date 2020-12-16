@@ -27,7 +27,9 @@ public class Ball : MonoBehaviour
         if(collision.collider.gameObject.GetComponent<PlayerController>())
         {
             collision.collider.gameObject.GetComponent<PlayerController>().GetHit();
-            Destroy(this.gameObject);
+            //Destroy(this.gameObject);
+            if(PV.IsMine)
+                PhotonNetwork.Destroy(PV);
         }
     }
 }
