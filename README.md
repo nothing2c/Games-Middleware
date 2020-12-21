@@ -1,2 +1,2 @@
 # Ryan Cosheril Games-Middleware
-Physics CA is in Assets/Physics CA
+Physics, annimation, networking and voice recognition are all in their respective folders under Assets.
